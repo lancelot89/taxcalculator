@@ -1,6 +1,6 @@
 import os
 import string
-from pathlib import Path
+import pathlib
 
 import termcolor
 
@@ -15,7 +15,7 @@ def get_template_dir_path():
         pass
 
     if not template_dir_path:
-        base_dir = Path(__file__).resolve().parents[1]
+        base_dir = pathlib.Path(__file__).resolve().parents[1]
         template_dir_path = os.path.join(base_dir, 'templates')
 
     return template_dir_path
